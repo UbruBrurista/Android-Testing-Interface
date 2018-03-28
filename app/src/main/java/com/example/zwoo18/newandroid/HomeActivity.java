@@ -72,7 +72,7 @@ public class HomeActivity extends Activity {
 
         //submit repeatable operation of sending data
 
-        findViewById(R.id.arduino_button).setOnClickListener(new View.OnClickListener() {
+        /*findViewById(R.id.arduino_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -81,7 +81,7 @@ public class HomeActivity extends Activity {
                     e.printStackTrace();
                 }
             }
-        });
+        });*/
     }
 
 
