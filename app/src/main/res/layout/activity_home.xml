@@ -5,25 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.zwoo18.newandroid.HomeActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
+    <Button
+        android:id="@+id/home_brew_cycle_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="17dp"
+        android:text="Home/Brew Unit: Full cycle"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <Button
+        android:id="@+id/home_brew_home_button"
+        android:layout_width="225dp"
+        android:layout_height="44dp"
+        android:layout_above="@+id/pump_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="Home/Brew Unit: Go Home"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <Button
+        android:id="@+id/pump_button"
+        android:layout_width="225dp"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/home_brew_home_button"
+        android:layout_marginBottom="51dp"
+        android:text="Pump..."
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/home_brew_home_button"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
         android:text="Welcome to ubru!"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.143" />
-
-    <Button
-        android:id="@+id/arduino_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="conversateWithArduino()"
-        android:text="Talk to Arduino"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="163dp" />
-
+</RelativeLayout>
 </android.support.constraint.ConstraintLayout>
