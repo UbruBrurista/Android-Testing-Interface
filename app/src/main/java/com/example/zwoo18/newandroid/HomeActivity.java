@@ -44,14 +44,18 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         mPeripheralManager = PeripheralManager.getInstance();
-//        List<String> deviceList = mPeripheralManager.getUartDeviceList();
-//        if (deviceList.isEmpty()) {
-//            System.out.println("No device");
-//        } else {
-//            for (String s : deviceList) {
-//                System.out.println(s);
-//            }
-//        }
+
+        /* See available devices */
+        /*List<String> deviceList = mPeripheralManager.getUartDeviceList();
+        if (deviceList.isEmpty()) {
+            System.out.println("No device");
+        } else {
+            for (String s : deviceList) {
+                System.out.println(s);
+            }
+        }*/
+
+
         try {
             mArduino = mPeripheralManager.openUartDevice("UART0");
             System.out.println("connected to " + mArduino.getName());
